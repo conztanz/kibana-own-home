@@ -7,6 +7,7 @@ export default function (kibana) {
     require: ['elasticsearch'],
 
     uiExports: {
+      hacks: ['plugins/own_home/hide_admin_menu'],
       app: {
         title: 'Own Home',
         description: 'Add multi-tenancy feature to Kibana',
