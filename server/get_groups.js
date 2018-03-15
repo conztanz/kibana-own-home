@@ -8,7 +8,7 @@ export default function (server, request, remoteUser, callback) {
 
   let groups = [];
 
-  if (config.get('own_home.local.enabled')) {
+  if (config.get('own_home.local.enabled') && request.auth.credentials._tenants.admin_tenant ) {
     Array.prototype.push.apply(groups, getLocalGroups(server));
   }
 
